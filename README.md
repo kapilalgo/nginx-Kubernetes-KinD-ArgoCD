@@ -53,7 +53,7 @@ Argo CD follows the GitOps pattern of using Git repositories as the source of tr
 Argo CD automates the deployment of the desired application states in the specified target environments. Application deployments can track updates to branches, tags, or pinned to a specific version of manifests at a Git commit.
 
 ```shell
-k get all -n argocd
+kubectl get all -n argocd
 ```
 
 ---
@@ -63,11 +63,11 @@ k get all -n argocd
 For the argocd to utilize Metallb, we have to change the service type of "argocd-server" service from "ClusterIP" to "LoadBalancer"
 
 ```shell
-k edit service argocd-server -n argocd
+kubectl edit service argocd-server -n argocd
 ```
 
 ```shell
-k get all -n argocd
+kubectl get all -n argocd
 ```
 
 **Now we see that the service type of "argocd-server" service has been changed from "ClusterIP" to "LoadBalancer".**
@@ -80,7 +80,7 @@ username: admin
 password: "**please enter the following command in the terminal**"
 
 ```shell
-k -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
 ### Create Application
