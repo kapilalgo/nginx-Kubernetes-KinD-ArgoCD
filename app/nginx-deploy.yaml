@@ -15,7 +15,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - image: nginx
+        - image: kapil0123/romofyi-website-demo
           name: nginx
           resources:
             requests:
