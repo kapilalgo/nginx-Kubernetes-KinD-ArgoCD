@@ -19,8 +19,8 @@ spec:
           name: nginx
           resources:
             requests:
-              cpu: "50m"  # Request 50 millicores of CPU
-              memory: "50Mi"  # Request 50 MiB of memory
+              cpu: "1m"  # Request 50 millicores of CPU
+              memory: "1Mi"  # Request 50 MiB of memory
             limits:
-              cpu: "100m"  # Limit to 100 millicores of CPU
-              memory: "100Mi"  # Limit to 100 MiB of memory
+              cpu: "1m"  # Limit to 100 millicores of CPU
+              memory: "1Mi"  # Limit to 100 MiB of memory
