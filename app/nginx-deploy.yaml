@@ -15,7 +15,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - image: kapil0123/seo-website-demo
+        - image: nginx
           name: nginx
           resources:
             requests:
